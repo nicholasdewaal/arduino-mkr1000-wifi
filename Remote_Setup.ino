@@ -1,9 +1,6 @@
 #include <WiFi101.h>  // For MKR1000, LGPL
 //#include <WiFiNINA.h> // For MKR1010, LGPL
-#include <WiFiClient.h>
-#include <WiFiServer.h>
-#include <WiFiSSLClient.h>
-#include <WiFiUdp.h>
+#include <SPI.h>
 #include <FlashStorage.h> //LGPL-2.1
 
 // Custom settings for wifi, sensor location, and Air Quality Limits
@@ -62,7 +59,7 @@ void setup()
         htmlWifiList += " dBm)</option>\n";
     }
     htmlWifiList += "</select>\n";
-    Serial.println(htmlWifiList);
+    //Serial.println(htmlWifiList);
 
     //  Include setup of the rest of your project here:
     //
